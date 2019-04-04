@@ -2,9 +2,9 @@
 # A web application for quickly creating and modifying Phamerator databases.
 # github.com/jglamine/phamdb
 
-from jglamine/ncbi-cdd:wheezy
+from debian
 
-maintainer jglamine@gmail.com
+# maintainer jglamine@gmail.com
 
 # install packages
 # split into multiple lines to decrease the size of each image commit because
@@ -13,11 +13,11 @@ run apt-get update && apt-get install -y git && apt-get clean && rm -rf /tmp/* /
 run apt-get --no-install-recommends install -y python python-dev python-setuptools && apt-get clean && rm -rf /tmp/* /var/tmp/*
 run apt-get install -y python-biopython hhsuite kalign && apt-get clean && rm -rf /tmp/* /var/tmp/*
 run apt-get install -y nginx supervisor && apt-get clean && rm -rf /tmp/* /var/tmp/*
-run apt-get --no-install-recommends install -y mysql-server libmysqlclient-dev && apt-get clean && rm -rf /tmp/* /var/tmp/*
+run apt-get --no-install-recommends install -y mysql-server default-libmysqlclient-dev && apt-get clean && rm -rf /tmp/* /var/tmp/*
 run apt-get install -y rabbitmq-server && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
 # download source code
-run git clone https://github.com/jglamine/phamdb.git /home/docker/code && rm -rf /home/docker/code/.git
+run git clone https://github.com/brandonekins/phamdb.git /home/docker/code && rm -rf /home/docker/code/.git
 
 # install pip packages
 # installs and then removes build-essential to save space
