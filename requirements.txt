@@ -27,3 +27,4 @@ subprocess32==3.2.6
 Tempita==0.5.2
 Unidecode==0.4.17
 Werkzeug==0.10.1
+uuid==1.30
